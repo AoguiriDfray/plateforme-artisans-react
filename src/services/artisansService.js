@@ -1,4 +1,5 @@
-const DATA_URL = '/datas.json'
+const DATA_URL = `${import.meta.env.BASE_URL}datas.json`
+
 
 export async function getAllArtisans() {
   const res = await fetch(DATA_URL)
