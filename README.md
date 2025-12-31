@@ -30,7 +30,13 @@ via un système de recherche par catégorie et des fiches artisan détaillées.
 ---
 
 ##  Structure du projet
-
+src/
+├── assets/
+├── components/
+├── pages/
+├── services/
+├── styles/
+└── data/
 ---
 
 ##  Design & UI
