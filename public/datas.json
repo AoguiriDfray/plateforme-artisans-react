@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Jean Dupont",
+    "category": "batiment",
+    "specialty": "Maçon",
+    "location": "Paris",
+    "note": 4,
+    "top": true,
+    "about": "Maçon expérimenté avec plus de 15 ans d’expérience.",
+    "email": "jean.dupont@mail.com",
+    "website": "https://example.com"
+  },
+  {
+    "id": 2,
+    "name": "Marie Martin",
+    "category": "services",
+    "specialty": "Coiffeuse",
+    "location": "Lyon",
+    "note": 5,
+    "top": true,
+    "about": "Coiffeuse à domicile spécialisée dans les événements.",
+    "email": "marie.martin@mail.com"
+  },
+  {
+    "id": 3,
+    "name": "Lucas Bernard",
+    "category": "alimentation",
+    "specialty": "Boulanger",
+    "location": "Marseille",
+    "note": 4,
+    "top": false,
+    "about": "Boulanger artisanal passionné par le pain au levain.",
+    "email": "lucas.bernard@mail.com"
+  },
+  {
+    "id": 4,
+    "name": "Sophie Leroy",
+    "category": "fabrication",
+    "specialty": "Céramiste",
+    "location": "Toulouse",
+    "note": 5,
+    "top": false,
+    "about": "Créatrice de pièces en céramique faites à la main.",
+    "email": "sophie.leroy@mail.com"
+  }
+]

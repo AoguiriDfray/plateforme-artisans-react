@@ -1,0 +1,393 @@
+/* =========================
+   GRAPHIK FONT-FACE
+========================= */
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('../../src/assets/fonts/graphik/Graphik-Regular-Trial.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('../../src/assets/fonts/graphik/Graphik-Medium-Trial.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('../../src/assets/fonts/graphik/Graphik-Bold-Trial.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================
+   VARIABLES (CHARTE)
+========================= */
+
+:root {
+  --color-primary: #1e3a8a;   // bleu pro
+  --color-secondary: #0f172a;
+  --color-accent: #2563eb;
+  --color-bg: #f8fafc;
+  --color-text: #0f172a;
+  --color-muted: #64748b;
+}
+
+/* =========================
+   RESET / BASE
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Graphik', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, sans-serif;
+  letter-spacing: 0.01em;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================
+   TYPOGRAPHIE
+========================= */
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin-bottom: 0.75rem;
+}
+
+/* =========================
+   HEADER
+========================= */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+h1,
+h2,
+h3 {
+  color: var(--color-primary);
+}
+.call-to-action {
+  border-left: 6px solid var(--color-accent);
+  background-color: #ffffff;
+}
+.card.highlight {
+  border-top-color: var(--color-accent);
+}
+
+header {
+  background-color: var(--color-primary);
+
+  a {
+    color: white;
+  }
+
+  .nav-link {
+    font-weight: 500;
+
+    &.active {
+      text-decoration: underline;
+    }
+  }
+
+  form input {
+    min-width: 180px;
+  }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background-color: #e5e7eb;
+
+  a {
+    color: var(--color-secondary);
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================
+   CARDS ARTISANS
+========================= */
+.btn-primary {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+
+  &:hover,
+  &:focus {
+    background-color: darken(#2563eb, 8%);
+    border-color: darken(#2563eb, 8%);
+  }
+}
+
+.card {
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.08);
+  }
+}
+.logo-mobile {
+  display: none;
+}
+.list-group-item {
+  border-left: 4px solid var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .logo-desktop {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: inline-block;
+  }
+}
+
+.card-title {
+  color: var(--color-secondary);
+}
+
+/* =========================
+   FORMULAIRES
+========================= */
+
+form {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+label {
+  font-weight: 500;
+}
+
+button {
+  font-weight: 600;
+}
+
+/* =========================
+   ACCESSIBILITÉ
+========================= */
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* =========================
+   404
+========================= */
+
+.display-1 {
+  color: var(--color-muted);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  header ul {
+    justify-content: center;
+  }
+
+  header form {
+    width: 100%;
+  }
+
+  header form input {
+    width: 100%;
+  }
+}
+/* =========================
+   BARRE DE RECHERCHE (HEADER)
+========================= */
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Champ de recherche */
+.search-input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  padding: 0.4rem 0.6rem;
+  color: white;
+  font-size: 0.9rem;
+  min-width: 180px;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom-color: var(--color-accent);
+  }
+}
+
+/* =========================
+   OVERRIDE: FORM RECHERCHE HEADER
+========================= */
+.search-form {
+  /* annule le style global des <form> */
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Champ de recherche */
+.search-input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+  padding: 0.35rem 0.2rem;
+  color: #fff;
+  font-size: 0.95rem;
+  width: 220px;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom-color: #fff; /* ou var(--color-accent) si tu veux */
+  }
+}
+
+/* Bouton rechercher */
+.search-button {
+  background: #fff;
+  border: none;
+  color: var(--color-accent);
+  font-weight: 700;
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Mobile : input full width */
+@media (max-width: 768px) {
+  .search-input {
+    width: 100%;
+  }
+  .search-form {
+    width: 100%;
+  }
+}
+/* Bouton toggle (effet pressé) */
+.btn-toggle {
+  background: transparent;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  font-weight: 700;
+  border-radius: 0.4rem;
+  transition: transform 0.05s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-toggle:active {
+  transform: translateY(1px);
+}
+
+.btn-toggle.is-active {
+  background: var(--color-accent);
+  color: white;
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.15);
+}
+/* Bouton toggle (effet pressé / actif) */
+.btn-toggle {
+  background: transparent;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  font-weight: 700;
+  border-radius: 0.4rem;
+  transition: transform 0.05s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-toggle:active {
+  transform: translateY(1px);
+}
+
+.btn-toggle.is-active {
+  background: var(--color-accent);
+  color: white;
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.15);
+}
+footer address {
+  font-style: normal;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
